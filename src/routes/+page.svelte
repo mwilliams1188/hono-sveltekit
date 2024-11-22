@@ -1,7 +1,17 @@
 <script lang="ts">
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcomeFallback from '$lib/images/svelte-welcome.png';
+	import { onMount } from 'svelte';
+
+	let message = $state('');
+
+	onMount(() => {
+		fetchData();
+	});
+
+	const fetchData = async () => {
+		const res = await fetch('/api/hello');
+		const json = await res.json();
+		message = json.message;
+	};
 </script>
 
 <svelte:head>
@@ -9,51 +19,19 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcomeFallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+<section class="w-full py-12 md:py-24 lg:py-32">
+	<div class="flex flex-col items-center justify-center space-y-4 px-4 md:px-6">
+		<p class="max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+			Here is the response to your API call:
+		</p>
+		<h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+			{!message ? 'Loading...' : message}
+		</h1>
+		<a
+			href="/api/hello"
+			class="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
+		>
+			View the API call
+		</a>
+	</div>
 </section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>

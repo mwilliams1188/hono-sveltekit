@@ -18,8 +18,8 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Hono + SvelteKit Starter</title>
+	<meta name="description" content="Hono + SvelteKit starter app" />
 </svelte:head>
 
 <section class="w-full py-12 md:py-24 lg:py-32">

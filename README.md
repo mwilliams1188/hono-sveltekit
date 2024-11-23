@@ -1,4 +1,4 @@
-This is a [honojs/hono](https://hono.dev/) + [SvelteKit](https://svelte.dev/docs/kit/introduction/) project inspired by Vercel's [Hono + Next.js Starter](https://github.com/vercel/hono-nextjs).
+This is a [Hono](https://hono.dev/) + [SvelteKit](https://svelte.dev/docs/kit/introduction/) project inspired by Vercel's [Hono + Next.js Starter](https://github.com/vercel/hono-nextjs).
 
 ## Demo
 

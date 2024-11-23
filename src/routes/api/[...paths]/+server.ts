@@ -17,4 +17,3 @@ app.get('/:wild', (c) => {
 });
 
 export const GET: RequestHandler = ({ request }) => app.fetch(request);
-export type Router = typeof app;

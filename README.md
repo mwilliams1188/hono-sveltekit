@@ -17,7 +17,7 @@ pnpm run dev -- --open
 
 Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
 
-You can start editing the API by modifying `app/api/[...route]/route.tsx` and learn more by taking a look to the [API documentation](https://hono.dev/api/hono).
+You can start editing the API by modifying `src/routes/api/[...paths]/+server.ts` and learn more by taking a look to the [API documentation](https://hono.dev/api/hono).
 
 ## Learn More
 

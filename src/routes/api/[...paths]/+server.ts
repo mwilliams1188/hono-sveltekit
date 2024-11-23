@@ -5,14 +5,14 @@ const app = new Hono().basePath('/api');
 
 app.get('/hello', (c) => {
 	return c.json({
-		message: 'Hello from Hono on Vercel!'
+		message: 'Hello from Hono!'
 	});
 });
 
 app.get('/:wild', (c) => {
 	const wild = c.req.param('wild');
 	return c.json({
-		message: `Hello from Hono on Vercel! You're now on /api/${wild}!`
+		message: `Hello from Hono! You're now on /api/${wild}!`
 	});
 });
 

@@ -2,7 +2,7 @@ This is a [honojs/hono](https://hono.dev/) + [SvelteKit](https://svelte.dev/docs
 
 ## Demo
 
-hono-sveltekit.vercel.app/
+https://hono-sveltekit.vercel.app/
 
 ## Deploy Your Own
 

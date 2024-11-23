@@ -1,5 +1,15 @@
 This is a [honojs/hono](https://hono.dev/) + [SvelteKit](https://svelte.dev/docs/kit/introduction/) project inspired by Vercel's [Hono + Next.js Starter](https://github.com/vercel/hono-nextjs).
 
+## Demo
+
+hono-sveltekit.vercel.app/
+
+## Deploy Your Own
+
+You can clone & deploy it to Vercel with one click:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmwilliams1188%2Fhono-sveltekit)
+
 ## Getting Started
 
 First, run the development server:
@@ -27,7 +37,3 @@ To learn more about Hono and SvelteKit, take a look at the following resources:
 - [Learn SvelteKit](https://svelte.dev/tutorial/kit/introducing-sveltekit) - an interactive SvelteKit tutorial.
 
 You can check out [the SvelteKit GitHub repository](https://github.com/sveltejs/kit/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Hono + SvelteKit app is to use the [Vercel Platform](https://vercel.com/templates?search=hono).
